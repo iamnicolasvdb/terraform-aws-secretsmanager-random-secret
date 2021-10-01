@@ -1,5 +1,6 @@
 output "secret" {
   description = "Generated secret"
+  sensitive   = true
   value       = var.create_secret ? random_password.random_string[0].result : ""
 }
 
